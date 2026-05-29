@@ -13,7 +13,6 @@
  * @subpackage ACM
  * @since ACM 1.0
  */
-<?php
 get_header();
 ?>
 
