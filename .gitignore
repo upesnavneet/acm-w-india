@@ -1,3 +1,13 @@
 node_modules/
 .env
 .DS_Store
+
+# API keys / secrets
+**/Maps_API_Key.php
+
+# Local Sites config & logs
+conf/
+logs/
+
+# WordPress uploads (large media)
+app/public/wp-content/uploads/
