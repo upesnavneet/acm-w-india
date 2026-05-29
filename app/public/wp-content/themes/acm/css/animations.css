@@ -1,0 +1,177 @@
+/* --- Lenis Smooth Scrolling Styles --- */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* --- Scroll Reveal Animations --- */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Stagger delays for children */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* --- Hero Banner Text Intro Animations --- */
+.banner-content .banner-heading small {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+.banner-content .banner-heading {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+}
+
+.banner-content p:not(.banner-heading) {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Sticky Glassmorphic Header Navigation --- */
+@media only screen and (min-width: 1130px) {
+  /* Set transition on the navigation element */
+  .top-bar.main-nav {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .top-bar.main-nav.sticky-nav {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    z-index: 9999 !important;
+    background: rgba(0, 90, 131, 0.8) !important; /* Semi-transparent ACM primary blue */
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0 40px !important;
+    animation: stickySlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .top-bar.main-nav.sticky-nav section li > a {
+    color: #ffffff !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    transition: color 0.3s ease;
+  }
+
+  .top-bar.main-nav.sticky-nav section li > a:hover {
+    color: #b9dfe9 !important;
+  }
+}
+
+@keyframes stickySlideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* --- Interactive Card Micro-Animations --- */
+.shadowed.cta,
+.post {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+/* Interactive Card hover state */
+.shadowed.cta:hover,
+.post:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Image zoom inside cards on hover */
+.shadowed.cta .text-wrap img,
+.post .entrytext img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shadowed.cta:hover .text-wrap img {
+  transform: scale(1.04);
+}
+
+/* Custom interactive accent line for cards */
+.shadowed.cta::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #005a83, #008cba);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shadowed.cta:hover::after {
+  transform: scaleX(1);
+}
+
+/* Navigation Menu hover underline micro-animation */
+.top-bar.main-nav section li.menu-item > a::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background-color: #b9dfe9;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.top-bar.main-nav section li.menu-item > a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
