@@ -16,9 +16,9 @@
 get_header();
 ?>
 
-<div class="banner-container">
-	<section class="acm-banner-container"
-		style="background-image: url('<?php echo esc_url( get_theme_mod( 'banner_bgimage', get_template_directory_uri() . '/img/banner.png' ) ); ?>');">
+<div class="banner-container banner-contain-mode">
+	<section class="acm-banner-container">
+		<img class="banner-bg-img" src="<?php echo esc_url( get_theme_mod( 'banner_bgimage', get_template_directory_uri() . '/img/banner.png' ) ); ?>" alt="Banner" />
 		<div class="gradient-wrapper"></div>
 		<div class="overlay"></div>
 		<div class="row">

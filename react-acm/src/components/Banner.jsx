@@ -13,18 +13,24 @@ export default function Banner({ customBanner }) {
       <section 
         className="acm-banner-container"
         style={{ 
-          backgroundImage: `url('${bgImage}')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
           position: 'relative',
-          padding: '85px 0',
+          overflow: 'hidden',
           color: '#fff',
-          minHeight: '340px',
-          display: 'flex',
-          alignItems: 'center',
+          backgroundColor: '#000',
           fontFamily: '"Inter", "Helvetica Neue", Arial, sans-serif'
         }}
       >
+        {/* Banner image displayed at its original aspect ratio */}
+        <img 
+          src={bgImage} 
+          alt="Banner" 
+          style={{
+            display: 'block',
+            width: '100%',
+            height: 'auto',
+            objectFit: 'contain'
+          }}
+        />
         {/* Subtle dark-teal geometric gradient overlay to ensure text contrast while showing the map */}
         <div 
           className="gradient-wrapper" 
@@ -51,7 +57,7 @@ export default function Banner({ customBanner }) {
           }}
         ></div>
         
-        <div className="row" style={{ position: 'relative', zIndex: 2, width: '100%', maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
+        <div className="row" style={{ position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 2, padding: '30px 20px', maxWidth: '1200px', margin: '0 auto' }}>
           <div className="columns large-12 medium-12 banner-content" style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
             
             {/* Title Block */}
@@ -109,4 +115,5 @@ export default function Banner({ customBanner }) {
     </div>
   );
 }
+
 

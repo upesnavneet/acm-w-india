@@ -10,9 +10,9 @@ if ( is_home() || is_category() || is_archive() ) :
 	isset( $attributes['textLine2'] ) && $attributes['textLine2'] ||
 	isset( $attributes['textLine3'] ) && $attributes['textLine3'] ) {
 		?>
-		<div class="banner-container">
-			<section class="acm-banner-container"
-				style="background-image: url('<?php echo esc_url( $attributes['mediaUrl'] ?? get_template_directory_uri() . '/img/banner.png' ); ?>');">
+		<div class="banner-container banner-contain-mode">
+			<section class="acm-banner-container">
+				<img class="banner-bg-img" src="<?php echo esc_url( $attributes['mediaUrl'] ?? get_template_directory_uri() . '/img/banner.png' ); ?>" alt="Banner" />
 				<div class="gradient-wrapper"></div>
 				<div class="overlay"></div>
 				<div class="row">
@@ -21,7 +21,7 @@ if ( is_home() || is_category() || is_archive() ) :
 							<small><?php echo esc_html( $attributes['textLine1'] ?? 'Association for Computing Machinery' ); ?></small>
 							<?php echo esc_html( $attributes['textLine2'] ?? 'Advancing Computing as a Science & Profession' ); ?>
 						</p>
-						<p><?php echo esc_html( $attributes['textLine3'] ?? 'We see a world where computing helps solve tomorrow’s problems – where we use our knowledge and skills to advance the profession and make a positive impact.' ); ?>
+						<p><?php echo esc_html( $attributes['textLine3'] ?? 'We see a world where computing helps solve tomorrow's problems – where we use our knowledge and skills to advance the profession and make a positive impact.' ); ?>
 						</p>
 					</div>
 				</div>
@@ -30,9 +30,9 @@ if ( is_home() || is_category() || is_archive() ) :
 		<?php
 	} else {
 		?>
-		<div class="banner-container">
-			<section class="acm-banner-container"
-				style="background-image: url('<?php echo esc_url( get_theme_mod( 'banner_bgimage', get_template_directory_uri() . '/img/banner.png' ) ); ?>');">
+		<div class="banner-container banner-contain-mode">
+			<section class="acm-banner-container">
+				<img class="banner-bg-img" src="<?php echo esc_url( get_theme_mod( 'banner_bgimage', get_template_directory_uri() . '/img/banner.png' ) ); ?>" alt="Banner" />
 				<div class="gradient-wrapper"></div>
 				<div class="overlay"></div>
 				<div class="row">
@@ -41,7 +41,7 @@ if ( is_home() || is_category() || is_archive() ) :
 							<small><?php echo esc_html( get_theme_mod( 'banner_top_title', 'Association for Computing Machinery' ) ); ?></small>
 							<?php echo esc_html( get_theme_mod( 'banner_title' ), 'Advancing Computing as a Science & Profession' ); ?>
 						</p>
-						<p><?php echo esc_html( get_theme_mod( 'banner_description', 'We see a world where computing helps solve tomorrow’s problems – where we use our knowledge and skills to advance the profession and make a positive impact.' ) ); ?></p>
+						<p><?php echo esc_html( get_theme_mod( 'banner_description', 'We see a world where computing helps solve tomorrow's problems – where we use our knowledge and skills to advance the profession and make a positive impact.' ) ); ?></p>
 					</div>
 				</div>
 			</section>
@@ -60,8 +60,11 @@ else :
 	// var_dump($banner);
 	if ( '' !== $banner['title'] ) :
 		?>
-<div class="banner-container">
-	<div class="acm-banner-container" style="background-image: url('<?php echo esc_url( $banner['image'] ); ?>');">
+<div class="banner-container banner-contain-mode">
+	<div class="acm-banner-container">
+		<?php if ( $banner['image'] ) : ?>
+		<img class="banner-bg-img" src="<?php echo esc_url( $banner['image'] ); ?>" alt="Banner" />
+		<?php endif; ?>
 		<div class="gradient-wrapper"></div>
 		<div class="overlay"></div>
 		<div class="row">

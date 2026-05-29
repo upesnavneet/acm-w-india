@@ -22,9 +22,11 @@ get_header();
 	$banner = ACMUtils::get_banner_data( $post->ID );
 if ( '' !== $banner['title'] ) :
 	?>
-<div class="banner-container">
-	<div class="acm-banner-container"
-		style="background-image: url('<?php echo esc_url( $banner['image'] ); ?>');">
+<div class="banner-container banner-contain-mode">
+	<div class="acm-banner-container">
+		<?php if ( $banner['image'] ) : ?>
+		<img class="banner-bg-img" src="<?php echo esc_url( $banner['image'] ); ?>" alt="Banner" />
+		<?php endif; ?>
 		<div class="gradient-wrapper"></div>
 		<div class="overlay"></div>
 		<div class="row">

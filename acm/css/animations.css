@@ -1,3 +1,67 @@
+/* --- Banner Contain Mode (full aspect ratio, no cropping) --- */
+.banner-contain-mode .acm-banner-container {
+  position: relative;
+  overflow: hidden;
+  background-image: none !important;
+  background-color: #000;
+  min-height: auto;
+  padding: 0;
+}
+
+.banner-contain-mode .acm-banner-container .banner-bg-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.banner-contain-mode .acm-banner-container .gradient-wrapper,
+.banner-contain-mode .acm-banner-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.banner-contain-mode .acm-banner-container .row {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 30px 0;
+  background: none;
+}
+
+@media only screen and (min-width: 1130px) {
+  .banner-contain-mode .acm-banner-container .row {
+    padding: 40px 0;
+  }
+  .banner-contain-mode .acm-banner-container .banner-content {
+    padding-top: 0;
+  }
+  #maincontent .banner-contain-mode .acm-banner-container,
+  #main .banner-contain-mode .acm-banner-container {
+    margin-top: 0;
+    padding-bottom: 0;
+    min-height: auto;
+  }
+}
+
+@media only screen and (max-width: 1129px) {
+  .banner-contain-mode .acm-banner-container {
+    min-height: auto;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .banner-contain-mode .acm-banner-container {
+    background-size: auto !important;
+  }
+}
+
 /* --- Lenis Smooth Scrolling Styles --- */
 html.lenis,
 html.lenis body {
