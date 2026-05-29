@@ -111,22 +111,30 @@ html.lenis body {
   }
 }
 
-/* --- Interactive Card Micro-Animations --- */
+/* --- Interactive Card Glassmorphism & Animations --- */
 .shadowed.cta,
 .post {
+  background: rgba(255, 255, 255, 0.55) !important;
+  backdrop-filter: blur(20px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(190%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.65) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px 0 rgba(0, 48, 73, 0.04) !important;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
   position: relative;
   overflow: hidden;
-  border-radius: 6px;
-  background: #ffffff;
 }
 
 /* Interactive Card hover state */
 .shadowed.cta:hover,
 .post:hover {
-  transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12) !important;
+  background: rgba(255, 255, 255, 0.75) !important;
+  border-color: rgba(0, 140, 186, 0.45) !important;
+  transform: translateY(-6px) scale(1.01) !important;
+  box-shadow: 0 20px 40px 0 rgba(0, 48, 73, 0.08) !important;
 }
 
 /* Image zoom inside cards on hover */
@@ -175,3 +183,43 @@ html.lenis body {
   transform: scaleX(1);
   transform-origin: left;
 }
+
+/* --- Global Sidebar Glassmorphism --- */
+#secondary .widget,
+#secondary [class*="widget"] {
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(20px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(190%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.65) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px 0 rgba(0, 48, 73, 0.04) !important;
+  padding: 1.5rem !important;
+  margin-bottom: 2rem !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+#secondary .widget:hover {
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-color: rgba(0, 140, 186, 0.4) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 16px 32px 0 rgba(0, 48, 73, 0.07) !important;
+}
+
+#secondary .widget h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #005a83;
+  font-weight: 700;
+  font-size: 1.35rem;
+  border-bottom: 1.5px solid rgba(0, 90, 131, 0.15);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+/* Global Main Content Mesh Background */
+#main {
+  background: radial-gradient(circle at 10% 20%, rgba(0, 90, 131, 0.04) 0%, transparent 45%),
+              radial-gradient(circle at 90% 80%, rgba(0, 140, 186, 0.04) 0%, transparent 45%),
+              #f6fafc !important;
+}
+
