@@ -1,1 +1,0 @@
-{"version":3,"file":"index.css","mappings":";;;AAAA;EACC;EACA;AACD,C","sources":["webpack://acm-page-404/./src/editor.scss"],"sourcesContent":[".wp-block-acm-page-404 {\n\tbackground: white;\n\tmin-height: 350px;\n}\n"],"names":[],"sourceRoot":""}
