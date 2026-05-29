@@ -51,7 +51,7 @@
 						<?php
 							$logo = get_theme_mod( 'logo_image' ) ?
 								get_theme_mod( 'logo_image' ) :
-								get_theme_root_uri() . '/acm/img/acm_logo.gif';
+								get_theme_root_uri() . '/acm/img/logo.png';
 						?>
 						<img alt="ACM Logo" height="78" class="logo" title="Home"
 							src="<?php echo esc_url( $logo ); ?>" />
@@ -60,7 +60,7 @@
 				<div class="navbar-header hide-for-large-up">
 					<a href="<?php echo esc_url( get_home_url() ); ?>">
 						<img alt="ACM Logo" class="img-responsive hide-for-large-up" title="Home"
-							src="<?php echo esc_url( get_theme_root_uri() ); ?>/acm/img/acm_logo_mobile.svg">
+							src="<?php echo esc_url( get_theme_root_uri() ); ?>/acm/img/logo.png">
 					</a>
 				</div>
 			</div>
