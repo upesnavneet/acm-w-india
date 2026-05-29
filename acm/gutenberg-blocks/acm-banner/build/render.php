@@ -12,7 +12,7 @@ if ( is_home() || is_category() || is_archive() ) :
 		?>
 		<div class="banner-container">
 			<section class="acm-banner-container"
-				style="background-image: url('<?php echo esc_url( $attributes['mediaUrl'] ?? get_template_directory_uri() . '/img/acm_desktopbanner.jpeg' ); ?>');">
+				style="background-image: url('<?php echo esc_url( $attributes['mediaUrl'] ?? get_template_directory_uri() . '/img/banner.png' ); ?>');">
 				<div class="gradient-wrapper"></div>
 				<div class="overlay"></div>
 				<div class="row">
@@ -32,7 +32,7 @@ if ( is_home() || is_category() || is_archive() ) :
 		?>
 		<div class="banner-container">
 			<section class="acm-banner-container"
-				style="background-image: url('<?php echo esc_url( get_theme_mod( 'banner_bgimage', get_template_directory_uri() . '/img/acm_desktopbanner.jpeg' ) ); ?>');">
+				style="background-image: url('<?php echo esc_url( get_theme_mod( 'banner_bgimage', get_template_directory_uri() . '/img/banner.png' ) ); ?>');">
 				<div class="gradient-wrapper"></div>
 				<div class="overlay"></div>
 				<div class="row">

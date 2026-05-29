@@ -3,7 +3,7 @@ import { mockThemeMod } from '../data/mockThemeMod';
 
 export default function Banner({ customBanner }) {
   // Allow overriding default banner settings for sub-pages, falling back to ACM-W India defaults
-  const bgImage = customBanner?.image || "/stock-images/acm-w.jpg";
+  const bgImage = customBanner?.image || "/acm/img/banner.png";
   const topTitle = customBanner?.topTitle !== undefined ? customBanner.topTitle : "ACM-W India";
   const title = customBanner?.title || "Supporting, celebrating and advocating for Women in Computing";
   const description = customBanner?.description || "ACM-W India Council on Women in Computing";
