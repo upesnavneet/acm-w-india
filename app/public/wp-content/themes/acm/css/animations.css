@@ -111,19 +111,25 @@ html.lenis body {
   }
 }
 
-/* --- Interactive Card Glassmorphism & Animations --- */
+/* --- Modern Glassmorphism Background --- */
+body {
+  background-color: #f4f4f4; /* Original grey base */
+}
+
+/* --- Glassmorphic Cards & Containers --- */
 .shadowed.cta,
-.post {
-  background: rgba(255, 255, 255, 0.55) !important;
-  backdrop-filter: blur(20px) saturate(190%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(190%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.65) !important;
+.post,
+#secondary .widget,
+.acm-w-intro {
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 48, 73, 0.05) !important;
   border-radius: 12px !important;
-  box-shadow: 0 10px 30px 0 rgba(0, 48, 73, 0.04) !important;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
               box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              background 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+              background 0.4s ease !important;
   position: relative;
   overflow: hidden;
 }
@@ -131,10 +137,10 @@ html.lenis body {
 /* Interactive Card hover state */
 .shadowed.cta:hover,
 .post:hover {
-  background: rgba(255, 255, 255, 0.75) !important;
-  border-color: rgba(0, 140, 186, 0.45) !important;
-  transform: translateY(-6px) scale(1.01) !important;
-  box-shadow: 0 20px 40px 0 rgba(0, 48, 73, 0.08) !important;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 48px 0 rgba(0, 90, 131, 0.15) !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 1) !important;
 }
 
 /* Image zoom inside cards on hover */
@@ -184,42 +190,292 @@ html.lenis body {
   transform-origin: left;
 }
 
-/* --- Global Sidebar Glassmorphism --- */
-#secondary .widget,
-#secondary [class*="widget"] {
-  background: rgba(255, 255, 255, 0.5) !important;
-  backdrop-filter: blur(20px) saturate(190%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(190%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.65) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 10px 30px 0 rgba(0, 48, 73, 0.04) !important;
-  padding: 1.5rem !important;
-  margin-bottom: 2rem !important;
+/* --- Unified Alignment & Spacing --- */
+
+/* Constrain the navbar links inside the same max-width as the Foundation .row grid */
+.top-bar.main-nav > .top-bar-section {
+  max-width: 73.5rem;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Ensure fallback menu container also aligns to the grid */
+.top-bar.main-nav .menu-container {
+  max-width: 73.5rem;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+.top-bar.main-nav .menu-container ul {
+  padding-left: 0 !important;
+}
+
+/* Keep the header row properly spaced */
+#header.row {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Align the main content area consistently */
+.article#maincontent {
+  max-width: 73.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Consistent spacing for the content row inside article */
+.article#maincontent > article > .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Zone-1 content column consistent padding */
+.article#maincontent .zone-1 {
+  padding-left: 1rem;
+}
+
+/* Sidebar alignment */
+#secondary {
+  padding-right: 1rem;
+}
+
+/* --- ACM-W India Premium Light Modern Theme --- */
+
+/* Canvas background override for the maincontent container */
+.article#maincontent {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  transition: background 0.5s ease;
+}
+
+/* Text styles & gradients */
+.text-gradient-blue {
+  background: linear-gradient(135deg, #0f172a 0%, #0369a1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-lead {
+  color: #334155 !important;
+  font-size: 0.875rem !important;
+  line-height: 1.8 !important;
+  font-family: Roboto, sans-serif;
+}
+
+.text-muted-glass {
+  color: #475569 !important;
+  font-size: 0.8rem !important;
+  line-height: 1.6 !important;
+  font-family: Roboto, sans-serif;
+}
+
+.glass-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.05) !important;
+  padding: 2.5rem !important;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
 }
 
-#secondary .widget:hover {
-  background: rgba(255, 255, 255, 0.7) !important;
-  border-color: rgba(0, 140, 186, 0.4) !important;
-  transform: translateY(-4px) !important;
-  box-shadow: 0 16px 32px 0 rgba(0, 48, 73, 0.07) !important;
+.glass-card:hover {
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 15px 40px 0 rgba(2, 132, 199, 0.1) !important;
+  transform: translateY(-4px);
 }
 
-#secondary .widget h2 {
-  font-family: 'Roboto Condensed', sans-serif;
-  color: #005a83;
-  font-weight: 700;
-  font-size: 1.35rem;
-  border-bottom: 1.5px solid rgba(0, 90, 131, 0.15);
-  padding-bottom: 0.6rem;
+/* Smaller or Grid Cards */
+.glass-grid-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.04) !important;
+  padding: 2rem !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  margin-bottom: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-grid-card:hover {
+  border-color: #7dd3fc !important;
+  box-shadow: 0 12px 32px 0 rgba(2, 132, 199, 0.08) !important;
+  transform: translateY(-4px);
+}
+
+.glass-grid-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #0284c7, #0369a1);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-grid-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* Pills & tags */
+.glass-tag {
+  background: #e0f2fe !important;
+  border: 1px solid #bae6fd !important;
+  color: #0369a1 !important;
+  padding: 0.35rem 0.85rem !important;
+  border-radius: 20px !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px !important;
+  display: inline-block;
   margin-bottom: 1rem;
-  text-transform: uppercase;
 }
 
-/* Global Main Content Mesh Background */
-#main {
-  background: radial-gradient(circle at 10% 20%, rgba(0, 90, 131, 0.04) 0%, transparent 45%),
-              radial-gradient(circle at 90% 80%, rgba(0, 140, 186, 0.04) 0%, transparent 45%),
-              #f6fafc !important;
+/* Statistical Counter design */
+.stat-item {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.stat-number {
+  font-size: 2.8rem;
+  font-weight: 800;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #0369a1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.stat-label {
+  color: #64748b;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Premium buttons */
+.btn-primary-glass {
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 30px !important;
+  padding: 0.85rem 2rem !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.25) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none !important;
+}
+
+.btn-primary-glass:hover {
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4) !important;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.btn-secondary-glass {
+  background: #ffffff !important;
+  color: #0369a1 !important;
+  border: 2px solid #0369a1 !important;
+  border-radius: 30px !important;
+  padding: 0.75rem 2rem !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none !important;
+}
+
+.btn-secondary-glass:hover {
+  background: #f0f9ff !important;
+  transform: translateY(-3px);
+}
+
+/* Sidebar styles on Light background */
+#secondary .widget {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.04) !important;
+  border-radius: 14px !important;
+  padding: 1.5rem !important;
+  color: #334155 !important;
+}
+
+#secondary .widget-title {
+  color: #0f172a !important;
+  border-bottom: 2px solid #bae6fd !important;
+  font-weight: 700 !important;
+}
+
+#secondary .widget a {
+  color: #0284c7 !important;
+  transition: color 0.3s ease;
+}
+
+#secondary .widget a:hover {
+  color: #0369a1 !important;
+  text-decoration: underline !important;
+}
+
+#secondary .widget li {
+  border-bottom: 1px solid #f1f5f9 !important;
+  padding: 0.6rem 0 !important;
+}
+
+/* How to start chapter step number bubble */
+.step-bubble {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #0369a1, #0284c7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+}
+
+/* Grid layout columns height adjustments */
+.eq-row-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.eq-row-flex > [class*="column"] {
+  display: flex;
+  flex-direction: column;
 }
 

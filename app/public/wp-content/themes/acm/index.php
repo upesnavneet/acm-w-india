@@ -16,176 +16,6 @@
 get_header();
 ?>
 
-<style>
-/* --- Homepage Glassmorphism Design System --- */
-body.is_home #main {
-	background: radial-gradient(circle at 10% 20%, rgba(0, 90, 131, 0.05) 0%, transparent 45%),
-				radial-gradient(circle at 90% 80%, rgba(0, 140, 186, 0.05) 0%, transparent 45%),
-				#f6fafc !important;
-	padding-bottom: 4rem;
-}
-
-/* Glassmorphic Hero Banner */
-.is_home .acm-banner-container {
-	position: relative;
-	min-height: 420px;
-	display: flex;
-	align-items: center;
-	padding: 4rem 0;
-	border-bottom: 4px solid rgba(0, 140, 186, 0.3);
-}
-
-.is_home .banner-content-glass {
-	background: rgba(0, 48, 73, 0.55);
-	backdrop-filter: blur(16px) saturate(140%);
-	-webkit-backdrop-filter: blur(16px) saturate(140%);
-	border: 1px solid rgba(255, 255, 255, 0.25);
-	border-radius: 16px;
-	padding: 3rem 2.5rem;
-	max-width: 650px;
-	box-shadow: 0 24px 50px rgba(0, 0, 0, 0.25);
-	margin: 2rem 0;
-	animation: bannerSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes bannerSlideUp {
-	from {
-		opacity: 0;
-		transform: translateY(30px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-.is_home .banner-content-glass h1 {
-	color: #ffffff !important;
-	font-family: 'Roboto Condensed', sans-serif;
-	font-weight: 700;
-	font-size: 2.8rem;
-	margin: 0.5rem 0 1.2rem 0;
-	line-height: 1.2;
-	text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.is_home .banner-content-glass p {
-	color: #e5f1f4 !important;
-	font-size: 1.15rem;
-	line-height: 1.6;
-	margin-bottom: 0;
-	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-}
-
-/* Glassmorphic Breadcrumbs */
-.is_home .breadcrumb-container {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
-}
-
-.is_home .breadcrumbs {
-	background: rgba(255, 255, 255, 0.5) !important;
-	backdrop-filter: blur(12px) saturate(180%);
-	-webkit-backdrop-filter: blur(12px) saturate(180%);
-	border: 1px solid rgba(255, 255, 255, 0.6) !important;
-	border-radius: 30px !important;
-	padding: 0.6rem 1.75rem !important;
-	display: inline-flex;
-	list-style: none;
-	box-shadow: 0 4px 20px rgba(0, 90, 131, 0.03);
-}
-
-/* Homepage Glass Cards */
-.is_home .glass-card {
-	background: rgba(255, 255, 255, 0.5) !important;
-	backdrop-filter: blur(20px) saturate(190%) !important;
-	-webkit-backdrop-filter: blur(20px) saturate(190%) !important;
-	border: 1px solid rgba(255, 255, 255, 0.65) !important;
-	border-radius: 16px !important;
-	box-shadow: 0 10px 30px 0 rgba(0, 48, 73, 0.04) !important;
-	padding: 2.25rem !important;
-	transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-	margin-bottom: 2rem !important;
-	position: relative;
-	overflow: hidden;
-}
-
-.is_home .glass-card:hover {
-	background: rgba(255, 255, 255, 0.75) !important;
-	border-color: rgba(0, 140, 186, 0.45) !important;
-	transform: translateY(-6px) scale(1.01) !important;
-	box-shadow: 0 20px 40px 0 rgba(0, 48, 73, 0.08) !important;
-}
-
-.is_home .glass-card::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 5px;
-	background: linear-gradient(90deg, #005a83, #008cba);
-	transform: scaleX(0);
-	transform-origin: left;
-	transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.is_home .glass-card:hover::after {
-	transform: scaleX(1);
-}
-
-/* Sidebar Glassmorphic Widgets */
-.is_home #secondary .widget,
-.is_home #secondary [class*="widget"] {
-	background: rgba(255, 255, 255, 0.5) !important;
-	backdrop-filter: blur(20px) saturate(190%) !important;
-	-webkit-backdrop-filter: blur(20px) saturate(190%) !important;
-	border: 1px solid rgba(255, 255, 255, 0.65) !important;
-	border-radius: 16px !important;
-	box-shadow: 0 10px 30px 0 rgba(0, 48, 73, 0.04) !important;
-	padding: 2rem !important;
-	margin-bottom: 2.25rem !important;
-	transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-}
-
-.is_home #secondary .widget:hover {
-	background: rgba(255, 255, 255, 0.7) !important;
-	border-color: rgba(0, 140, 186, 0.4) !important;
-	transform: translateY(-4px) !important;
-	box-shadow: 0 16px 32px 0 rgba(0, 48, 73, 0.07) !important;
-}
-
-.is_home #secondary .widget h2 {
-	font-family: 'Roboto Condensed', sans-serif;
-	color: #005a83;
-	font-weight: 700;
-	font-size: 1.35rem;
-	border-bottom: 1.5px solid rgba(0, 90, 131, 0.15);
-	padding-bottom: 0.6rem;
-	margin-bottom: 1rem;
-	text-transform: uppercase;
-}
-
-/* CTA Icon Styling */
-.is_home .cta-icon-wrapper {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 60px;
-	height: 60px;
-	background: rgba(0, 140, 186, 0.1);
-	color: #005a83;
-	border-radius: 12px;
-	margin-bottom: 1.5rem;
-	transition: all 0.3s ease;
-}
-
-.is_home .glass-card:hover .cta-icon-wrapper {
-	background: rgba(0, 140, 186, 0.2);
-	transform: scale(1.05);
-}
-</style>
-
 <?php
 	// Use banner.png from theme img folder as the default banner image.
 	$banner_image = get_template_directory_uri() . '/img/banner.png';
@@ -196,25 +26,24 @@ body.is_home #main {
 	$banner_top_title  = get_theme_mod( 'banner_top_title', '' );
 	$banner_title      = get_theme_mod( 'banner_title', '' );
 	$banner_desc       = get_theme_mod( 'banner_description', '' );
+	$has_text_overlay   = ( ! empty( $banner_top_title ) || ! empty( $banner_title ) || ! empty( $banner_desc ) );
 ?>
 <div class="banner-container">
 	<section class="acm-banner-container"
 		style="background-image: url('<?php echo esc_url( $banner_image ); ?>'); background-size: cover; background-position: center;">
+		<?php if ( $has_text_overlay ) : ?>
+		<div class="gradient-wrapper"></div>
+		<div class="overlay"></div>
 		<div class="row">
-			<div class="columns large-12 medium-12">
-				<div class="banner-content-glass">
-					<small style="text-transform: uppercase; color: #b9dfe9; font-weight: 700; letter-spacing: 2px; font-size: 0.9rem; display: block; font-family: 'Roboto Condensed', sans-serif;">
-						<?php echo !empty($banner_top_title) ? esc_html($banner_top_title) : 'ACM-W India'; ?>
-					</small>
-					<h1>
-						<?php echo !empty($banner_title) ? esc_html($banner_title) : 'Empowering Women in Computing'; ?>
-					</h1>
-					<p>
-						<?php echo !empty($banner_desc) ? esc_html($banner_desc) : 'Supporting, celebrating, and advocating internationally for the full engagement of women in all aspects of the computing field.'; ?>
-					</p>
-				</div>
+			<div class="columns large-12 medium-12 banner-content">
+				<p class="banner-heading">
+					<small><?php echo esc_html( $banner_top_title ); ?></small>
+					<?php echo esc_html( $banner_title ); ?>
+				</p>
+				<p><?php echo esc_html( $banner_desc ); ?></p>
 			</div>
 		</div>
+		<?php endif; ?>
 	</section>
 </div>
 
@@ -226,85 +55,197 @@ body.is_home #main {
 	</div>
 </div>
 
+<?php
+if ( have_posts() ) :
+	if ( is_home() && ! is_front_page() ) :
+		?>
+<header>
+	<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+</header>
+		<?php
+		endif;
+	endif;
+?>
+
 <div class="article" id="maincontent">
-	<article class="has-edit-button columns" id="SkipTarget" tabindex="-1">
+	<article class="has-edit-button" id="SkipTarget" tabindex="-1">
 		<div class="row">
 			<div class="columns large-9 medium-9 small-12 zone-1">
-				
-				<!-- Welcome / Intro Glass Card -->
-				<div class="glass-card reveal-on-scroll reveal-delay-1" style="border-left: 6px solid #005a83 !important;">
-					<h2 style="font-family: 'Roboto Condensed', sans-serif; color: #005a83; font-weight: 700; margin-top: 0; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px;">Empowering Women in Computing</h2>
-					<p style="font-size: 1.1rem; line-height: 1.6; color: #333; margin-bottom: 0;">
-						<strong>ACM-W India</strong> (Association for Computing Machinery - Women, India) stands as a vibrant beacon dedicated to supporting, celebrating, and advocating internationally for the full engagement of women in all aspects of the computing field. We aim to inspire, motivate, and empower women computing professionals and students across India, fostering a growth-oriented community in both academia and industry.
+				<!-- Mission Statement (Plain Text) -->
+				<div class="intro-section" style="margin-bottom: 3rem; color: #333333; font-family: Roboto, sans-serif;">
+					<h2 style="text-align: left; font-weight: 700; font-size: 1.45rem; margin-top: 1rem; margin-bottom: 1.5rem; color: #1e293b; font-family: 'Roboto Condensed', sans-serif;">
+						About ACM-W India
+					</h2>
+					<p style="font-size: 0.875rem; line-height: 1.6; margin-bottom: 1.25rem;">
+						ACM-W India drives the advancement of women across all aspects of computing — from research and academia to industry and innovation. As a standing committee of ACM India, we create tangible opportunities through mentorship programmes, skill-building events, professional chapters, and national recognition platforms that celebrate the work of technical women.
+					</p>
+					<p style="font-size: 0.875rem; line-height: 1.6; margin-bottom: 2.5rem;">
+						ACM Women India (ACM-W India) is a standing committee of <a href="#" style="color: #0077b6; text-decoration: none;">ACM India <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline; margin-bottom:2px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a> and works to fulfill the <a href="#" style="color: #0077b6; text-decoration: none;">ACM-W <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline; margin-bottom:2px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a> mission in India.
 					</p>
 				</div>
 
-				<h3 class="reveal-on-scroll reveal-delay-2" style="font-family: 'Roboto Condensed', sans-serif; color: #005a83; font-weight: 700; margin-top: 2rem; margin-bottom: 1.5rem; border-bottom: 1.5px solid rgba(0, 90, 131, 0.15); padding-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.5px;">Our Core Focus & Aims</h3>
+				<!-- Welcome from the Chair Section -->
+				<div style="margin-bottom: 3.5rem; padding-top: 2rem; border-top: 1px solid #e2e8f0; color: #333333; font-family: Roboto, sans-serif;">
+					<h3 style="text-align: left; font-family: 'Roboto Condensed', sans-serif; color: #0f172a; font-weight: 800; margin-bottom: 1.5rem; font-size: 1.45rem; letter-spacing: -0.5px;">
+						Welcome from the ACM-W India Chair
+					</h3>
+					
+					<div class="row" style="margin-left: 0; margin-right: 0;">
+						<div class="large-4 medium-4 small-12 columns" style="padding-left: 0; padding-right: 1.5rem; margin-bottom: 1.5rem;">
+							<img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=300" alt="Dr. Geetanjali Kale, ACM-W India Chair" style="width: 100%; max-width: 320px; height: auto; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); border: 1px solid #e2e8f0; display: block; margin-bottom: 1rem;" />
+							<p style="font-weight: 700; font-size: 0.95rem; color: #0f172a; margin-bottom: 0.25rem; font-family: 'Roboto Condensed', sans-serif; line-height: 1.2;">
+								Dr. Geetanjali Kale
+							</p>
+							<p style="font-size: 0.8rem; color: #64748b; margin-bottom: 0; font-family: Roboto, sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+								Chair, ACM-W India
+							</p>
+							<p style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.15rem; margin-bottom: 0;">
+								(2024 – Present)
+							</p>
+						</div>
+						
+						<div class="large-8 medium-8 small-12 columns" style="padding-left: 0; padding-right: 0;">
+							<p style="font-size: 0.9rem; line-height: 1.7; color: #334155; margin-bottom: 1.25rem;">
+								At ACM-W India, we believe that the full participation of women in computing is not just an aspiration — it is a necessity. Our initiatives span grassroots student chapters and high-impact national conferences, all driven by the conviction that diverse teams build stronger technology and a more equitable world for everyone.
+							</p>
+							<p style="font-size: 0.9rem; line-height: 1.7; color: #334155; margin-bottom: 0;">
+								We invite every woman in computing — student, researcher, or professional — to engage with our community. Write to us at <a href="mailto:chair@india.acm.org" style="color: #0077b6; text-decoration: none; font-weight: 600;">chair@india.acm.org</a>.
+							</p>
+						</div>
+					</div>
+				</div>
 
-				<div class="articles">
-					<div class="three-cols article-block">
-						<div class="row" data-equalizer>
-							
-							<!-- Card 1: Professional Growth -->
-							<div class="large-6 medium-6 small-12 columns reveal-on-scroll reveal-delay-2">
-								<div class="glass-card" data-equalizer-watch="" style="min-height: 290px; display: flex; flex-direction: column; justify-content: space-between;">
-									<div>
-										<div class="cta-icon-wrapper">
-											<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
-										</div>
-										<h4 style="font-family: 'Roboto Condensed', sans-serif; color: #005a83; font-size: 1.25rem; margin-top: 0; margin-bottom: 0.75rem; font-weight: 700;">Professional Development</h4>
-										<div class="dek" style="font-size: 0.95rem; line-height: 1.55; color: #555;">
-											Advancing careers and research in computing by hosting national conferences, decennial celebrations, technical workshops, and talks by eminent experts to expose women to state-of-the-art technologies and research trends.
-										</div>
-									</div>
+				<!-- Join & Volunteer Sections -->
+				<div style="margin-bottom: 3.5rem; padding-top: 2rem; border-top: 1px solid #e2e8f0; color: #333333; font-family: Roboto, sans-serif;">
+					<div style="margin-bottom: 2.5rem;">
+						<h3 style="text-align: left; font-family: 'Roboto Condensed', sans-serif; color: #0f172a; font-weight: 800; margin-bottom: 1.25rem; font-size: 1.3rem; letter-spacing: -0.5px;">
+							Become Part of ACM-W
+						</h3>
+						<p style="font-size: 0.875rem; line-height: 1.7; color: #334155; margin-bottom: 0;">
+							Joining ACM-W is simple — when you sign up or renew your ACM membership, check the ACM-W box. You'll instantly connect with a global community of advocates and gain access to exclusive newsletters, early event registration, and networks designed to amplify your voice and accelerate your career in computing.
+						</p>
+					</div>
+				</div>
+
+				<!-- Core Pillars & Initiatives (Styled like Latest Updates) -->
+				<h3 id="initiatives" style="font-family: 'Roboto Condensed', sans-serif; text-align: left; color: #1e293b; font-weight: 700; margin-bottom: 2.5rem; font-size: 1.45rem; scroll-margin-top: 100px;">
+					Core Pillars & Initiatives
+				</h3>
+
+				<div class="row eq-row-flex" style="margin-bottom: 3.5rem; margin-left: -0.5rem; margin-right: -0.5rem;">
+					<!-- Card 1 -->
+					<div class="large-6 medium-6 small-12 columns" style="margin-bottom: 1.5rem; padding-left: 0.5rem; padding-right: 0.5rem;">
+						<div class="glass-grid-card">
+							<div style="margin-bottom: 1.25rem; color: #00b4d8; background: rgba(0, 180, 216, 0.1); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 12px; border: 1px solid rgba(0, 180, 216, 0.2);">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+							</div>
+							<h4 style="font-family: 'Roboto Condensed', sans-serif; color: #0f172a; font-size: 1rem; font-weight: 700; margin-top: 0; margin-bottom: 0.75rem;">Professional Growth & DSP</h4>
+							<p class="text-muted-glass" style="margin-bottom: 0;">
+								From invited lectures by industry leaders to intensive skill-building workshops, we foster environments where women grow as technical professionals. Our Distinguished Speaker Program connects campuses across India with globally recognised computing pioneers.
+							</p>
+						</div>
+					</div>
+
+					<!-- Card 2 -->
+					<div class="large-6 medium-6 small-12 columns" style="margin-bottom: 1.5rem; padding-left: 0.5rem; padding-right: 0.5rem;">
+						<div class="glass-grid-card">
+							<div style="margin-bottom: 1.25rem; color: #00b4d8; background: rgba(0, 180, 216, 0.1); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 12px; border: 1px solid rgba(0, 180, 216, 0.2);">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+							</div>
+							<h4 style="font-family: 'Roboto Condensed', sans-serif; color: #0f172a; font-size: 1rem; font-weight: 700; margin-top: 0; margin-bottom: 0.75rem;">Student Chapters & Outreach</h4>
+							<p class="text-muted-glass" style="margin-bottom: 0;">
+								We support passionate students in launching ACM-W chapters at their institutions, cultivating local ecosystems of learning, leadership, and community. Technical bootcamps, coding contests, and national hackathons give young women the stage to excel.
+							</p>
+						</div>
+					</div>
+
+					<!-- Card 3 -->
+					<div class="large-6 medium-6 small-12 columns" style="margin-bottom: 1.5rem; padding-left: 0.5rem; padding-right: 0.5rem;">
+						<div class="glass-grid-card">
+							<div style="margin-bottom: 1.25rem; color: #00b4d8; background: rgba(0, 180, 216, 0.1); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 12px; border: 1px solid rgba(0, 180, 216, 0.2);">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+							</div>
+							<h4 style="font-family: 'Roboto Condensed', sans-serif; color: #0f172a; font-size: 1rem; font-weight: 700; margin-top: 0; margin-bottom: 0.75rem;">Mentorship & Grad Cohorts</h4>
+							<p class="text-muted-glass" style="margin-bottom: 0;">
+								Our Graduate Cohort programme pairs women researchers with seasoned mentors from academia and industry, providing peer support, publishing guidance, and career navigation tools critical to thriving in graduate-level computing.
+							</p>
+						</div>
+					</div>
+
+					<!-- Card 4 -->
+					<div class="large-6 medium-6 small-12 columns" style="margin-bottom: 1.5rem; padding-left: 0.5rem; padding-right: 0.5rem;">
+						<div class="glass-grid-card">
+							<div style="margin-bottom: 1.25rem; color: #00b4d8; background: rgba(0, 180, 216, 0.1); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 12px; border: 1px solid rgba(0, 180, 216, 0.2);">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+							</div>
+							<h4 style="font-family: 'Roboto Condensed', sans-serif; color: #0f172a; font-size: 1rem; font-weight: 700; margin-top: 0; margin-bottom: 0.75rem;">Scholarships & Travel Grants</h4>
+							<p class="text-muted-glass" style="margin-bottom: 0;">
+								Financial barriers should never limit a talented woman's reach. Our scholarships and travel grants fund participation in premier international computing conferences, spotlighting India's brightest women technologists.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Flagship Events Highlights -->
+				<h3 style="font-family: 'Roboto Condensed', sans-serif; color: #0f172a; font-weight: 800; margin-bottom: 2rem; font-size: 1.45rem; letter-spacing: -0.5px; border-left: 4px solid #00b4d8; padding-left: 1rem;">
+					Flagship Celebrations & Competitions
+				</h3>
+
+				<div class="glass-card" style="padding: 2.2rem !important; margin-bottom: 3.5rem;">
+					<div class="row">
+						<div class="large-6 columns" style="margin-bottom: 1.5rem;">
+							<div style="border-left: 3px solid #00b4d8; padding-left: 1.25rem;">
+								<span class="glass-tag" style="background: rgba(144, 224, 239, 0.1) !important; color: #90e0ef !important;">Annual Conference</span>
+								<h4 style="font-family: 'Roboto Condensed', sans-serif; color: #0f172a; font-size: 1.05rem; font-weight: 700; margin-top: 0; margin-bottom: 0.75rem;">AICWiC: Celebration of Women</h4>
+								<p class="text-muted-glass" style="margin-bottom: 0; font-size: 0.85rem !important;">
+									India's premier women-in-computing conference, uniting researchers, industry leaders, and students for an immersive day of keynotes, paper presentations, and career panels that celebrate and elevate the work of women in tech.
+								</p>
+							</div>
+						</div>
+						<div class="large-6 columns">
+							<div style="border-left: 3px solid #00b4d8; padding-left: 1.25rem;">
+								<span class="glass-tag" style="background: rgba(144, 224, 239, 0.1) !important; color: #90e0ef !important;">National Coding Event</span>
+								<h4 style="font-family: 'Roboto Condensed', sans-serif; color: #0f172a; font-size: 1.05rem; font-weight: 700; margin-top: 0; margin-bottom: 0.75rem;">ACM-W India Hackathon</h4>
+								<p class="text-muted-glass" style="margin-bottom: 0; font-size: 0.85rem !important;">
+									A high-stakes, innovation-first hackathon where women engineers tackle real-world challenges in sustainability, health, and digital inclusion — building impactful prototypes under the mentorship of leading industry experts.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Start a Student Chapter CTA (Modern Banner) -->
+				<div class="glass-card" style="background: linear-gradient(135deg, rgba(0, 119, 182, 0.08) 0%, rgba(255, 255, 255, 0.01) 100%) !important; border: 1px solid rgba(0, 180, 216, 0.15) !important; padding: 2.5rem !important; margin-bottom: 0;">
+					<div class="row">
+						<div class="large-8 columns">
+							<span class="glass-tag">Empower Your Campus</span>
+							<h3 style="font-family: 'Roboto Condensed', sans-serif; color: #0f172a; font-weight: 800; font-size: 1.35rem; margin-top: 0; margin-bottom: 1rem; letter-spacing: -0.5px;">
+								Bring ACM-W India to Your Campus
+							</h3>
+							<p class="text-lead" style="font-size: 0.85rem !important; margin-bottom: 2rem;">
+								Launching an ACM-W student chapter is the most direct way to foster a culture of inclusion at your institution. Chapters unlock access to lectures, project grants, mentors, and an international network of women in computing — from day one.
+							</p>
+							<div class="row" style="margin-bottom: 2rem;">
+								<div class="large-4 columns" style="margin-bottom: 1rem;">
+									<div class="step-bubble">1</div>
+									<h5 style="color: #0f172a; font-weight: 700; font-size: 0.8rem; margin-bottom: 0.25rem; font-family: 'Roboto Condensed', sans-serif;">Assemble Team</h5>
+									<p class="text-muted-glass" style="font-size: 0.78rem !important; margin: 0; line-height: 1.4;">10+ student members and 1 faculty sponsor.</p>
+								</div>
+								<div class="large-4 columns" style="margin-bottom: 1rem;">
+									<div class="step-bubble">2</div>
+									<h5 style="color: #0f172a; font-weight: 700; font-size: 0.8rem; margin-bottom: 0.25rem; font-family: 'Roboto Condensed', sans-serif;">Charter Online</h5>
+									<p class="text-muted-glass" style="font-size: 0.78rem !important; margin: 0; line-height: 1.4;">Submit the official application via ACM Portal.</p>
+								</div>
+								<div class="large-4 columns" style="margin-bottom: 1rem;">
+									<div class="step-bubble">3</div>
+									<h5 style="color: #0f172a; font-weight: 700; font-size: 0.8rem; margin-bottom: 0.25rem; font-family: 'Roboto Condensed', sans-serif;">Launch & Grow</h5>
+									<p class="text-muted-glass" style="font-size: 0.78rem !important; margin: 0; line-height: 1.4;">Receive expert resources and chapter support.</p>
 								</div>
 							</div>
-
-							<!-- Card 2: Student Chapters -->
-							<div class="large-6 medium-6 small-12 columns reveal-on-scroll reveal-delay-3">
-								<div class="glass-card" data-equalizer-watch="" style="min-height: 290px; display: flex; flex-direction: column; justify-content: space-between;">
-									<div>
-										<div class="cta-icon-wrapper">
-											<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-										</div>
-										<h4 style="font-family: 'Roboto Condensed', sans-serif; color: #005a83; font-size: 1.25rem; margin-top: 0; margin-bottom: 0.75rem; font-weight: 700;">Student Chapters & Engagement</h4>
-										<div class="dek" style="font-size: 0.95rem; line-height: 1.55; color: #555;">
-											Fostering future generations of female computing professionals by supporting the establishment of ACM-W student chapters across India, organizing student coding contests, hackathons, and self-defense initiatives.
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Card 3: Mentorship & Networking -->
-							<div class="large-6 medium-6 small-12 columns reveal-on-scroll reveal-delay-4">
-								<div class="glass-card" data-equalizer-watch="" style="min-height: 290px; display: flex; flex-direction: column; justify-content: space-between;">
-									<div>
-										<div class="cta-icon-wrapper">
-											<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 15V9a4 4 0 0 0-4-4H9"></path><polyline points="12 15 8 18 4 15"></polyline></svg>
-										</div>
-										<h4 style="font-family: 'Roboto Condensed', sans-serif; color: #005a83; font-size: 1.25rem; margin-top: 0; margin-bottom: 0.75rem; font-weight: 700;">Mentorship & Networking</h4>
-										<div class="dek" style="font-size: 0.95rem; line-height: 1.55; color: #555;">
-											Connecting female students with experienced mentors in academia and industry. Providing networking platforms to exchange ideas, share resources, and build collaborative research initiatives.
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Card 4: Recognition & Support -->
-							<div class="large-6 medium-6 small-12 columns reveal-on-scroll reveal-delay-5">
-								<div class="glass-card" data-equalizer-watch="" style="min-height: 290px; display: flex; flex-direction: column; justify-content: space-between;">
-									<div>
-										<div class="cta-icon-wrapper">
-											<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-										</div>
-										<h4 style="font-family: 'Roboto Condensed', sans-serif; color: #005a83; font-size: 1.25rem; margin-top: 0; margin-bottom: 0.75rem; font-weight: 700;">Recognition & Scholarships</h4>
-										<div class="dek" style="font-size: 0.95rem; line-height: 1.55; color: #555;">
-											Celebrating women's achievements in computing through dedicated scholarships, travel grants for top-tier conferences, and awards recognizing outstanding technical contributions.
-										</div>
-									</div>
-								</div>
-							</div>
-
+							<a href="/start-chapter/" class="btn-primary-glass" style="box-shadow: 0 4px 15px rgba(0, 180, 216, 0.4) !important;">Read Starter Guide</a>
+						</div>
+						<div class="large-4 columns show-for-large-up" style="display: flex; align-items: center; justify-content: center; padding-left: 2rem; height: 320px;">
+							<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.8; filter: drop-shadow(0 0 10px rgba(0, 180, 216, 0.45));"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
 						</div>
 					</div>
 				</div>

@@ -105,13 +105,21 @@
 					</div>
 				</div>
 				<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'primary',
-								'menu_class'     => 'nav-menu',
-								'menu_id'        => 'primary-menu',
-							)
-						);
+						if ( has_nav_menu( 'primary' ) ) {
+							wp_nav_menu(
+								array(
+									'theme_location' => 'primary',
+									'menu_class'     => 'nav-menu',
+									'menu_id'        => 'primary-menu',
+								)
+							);
+						} else {
+							echo '<div class="menu-container"><ul id="primary-menu" class="nav-menu" style="display:flex; list-style:none; margin:0; padding:0 0 0 15px; align-items:center; height:100%;">';
+							echo '<li class="menu-item" style="margin-right: 2rem;"><a href="/about-us/" style="color:#fff; font-weight:bold; font-family:system-ui,sans-serif; text-transform:uppercase; text-decoration:none;">About Us</a></li>';
+							echo '<li class="menu-item" style="margin-right: 2rem;"><a href="/executive-committee/" style="color:#fff; font-weight:bold; font-family:system-ui,sans-serif; text-transform:uppercase; text-decoration:none;">Executive Committee</a></li>';
+							echo '<li class="menu-item"><a href="/flagship-events/" style="color:#fff; font-weight:bold; font-family:system-ui,sans-serif; text-transform:uppercase; text-decoration:none;">Flagship Events</a></li>';
+							echo '</ul></div>';
+						}
 						?>
 				<button class="nav__dropdown-toggle">MORE</button>
 				<div class="more-list-box"></div>
