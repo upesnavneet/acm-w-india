@@ -74,18 +74,18 @@ endif;
 			<div class="columns large-8 medium-8 small-12 zone-1">
 				<!-- Mission Statement (Plain Text) -->
 				<div class="intro-section"
-					style="margin-bottom: 3rem; color: #333333; font-family: Roboto, sans-serif;">
+					style="margin-bottom: 3rem; color: #000000; font-family: Roboto, sans-serif;">
 					<h2
 						style="text-align: left; font-weight: 700; font-size: 24px; margin-top: 1rem; margin-bottom: 1.5rem; color: #1e293b; font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif;">
 						About ACM-W India
 					</h2>
-					<p style="font-size: 0.875rem; line-height: 1.6; margin-bottom: 1.25rem;">
+					<p style="font-size: 0.875rem; line-height: 1.6; margin-bottom: 1.25rem; color: #000000;">
 						ACM-W India drives the advancement of women across all aspects of computing. From research and
 						academia to industry and innovation. As a standing committee of ACM India, we create tangible
 						opportunities through mentorship programmes, skill-building events, professional chapters, and
 						national recognition platforms that celebrate the work of technical women.
 					</p>
-					<p style="font-size: 0.875rem; line-height: 1.6; margin-bottom: 2.5rem;">
+					<p style="font-size: 0.875rem; line-height: 1.6; margin-bottom: 2.5rem; color: #000000;">
 						ACM Women India (ACM-W India) is a standing committee of <a href="#"
 							style="color: #0077b6; text-decoration: none;">ACM India <svg
 								xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
@@ -108,7 +108,7 @@ endif;
 
 				<!-- Welcome from the Chair Section -->
 				<div
-					style="margin-bottom: 3.5rem; padding-top: 2rem; border-top: 1px solid #e2e8f0; color: #333333; font-family: Roboto, sans-serif;">
+					style="margin-bottom: 3.5rem; padding-top: 2rem; border-top: 1px solid #e2e8f0; color: #000000; font-family: Roboto, sans-serif;">
 					<h3
 						style="text-align: left; font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif; color: #0f172a; font-weight: 700; margin-bottom: 1.5rem; font-size: 24px; letter-spacing: 0;">
 						Welcome from the ACM-W India Chair
@@ -134,13 +134,13 @@ endif;
 						</div>
 
 						<div class="large-8 medium-8 small-12 columns" style="padding-left: 0; padding-right: 0;">
-							<p style="font-size: 0.9rem; line-height: 1.7; color: #334155; margin-bottom: 1.25rem;">
+							<p style="font-size: 0.9rem; line-height: 1.7; color: #000000; margin-bottom: 1.25rem;">
 								At ACM-W India, we believe that the full participation of women in computing is not just
 								an aspiration. It is a necessity. Our initiatives span grassroots student chapters and
 								high-impact national conferences, all driven by the conviction that diverse teams build
 								stronger technology and a more equitable world for everyone.
 							</p>
-							<p style="font-size: 0.9rem; line-height: 1.7; color: #334155; margin-bottom: 0;">
+							<p style="font-size: 0.9rem; line-height: 1.7; color: #000000; margin-bottom: 0;">
 								We invite every woman in computing whether it is a student, researcher, or professional
 								to engage with our community. Write to us at <a href="mailto:chair@india.acm.org"
 									style="color: #0077b6; text-decoration: none; font-weight: 600;">chair@india.acm.org</a>.
@@ -151,13 +151,13 @@ endif;
 
 				<!-- Join & Volunteer Sections -->
 				<div
-					style="margin-bottom: 3.5rem; padding-top: 2rem; border-top: 1px solid #e2e8f0; color: #333333; font-family: Roboto, sans-serif;">
+					style="margin-bottom: 3.5rem; padding-top: 2rem; border-top: 1px solid #e2e8f0; color: #000000; font-family: Roboto, sans-serif;">
 					<div style="margin-bottom: 2.5rem;">
 						<h3
 							style="text-align: left; font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif; color: #0f172a; font-weight: 700; margin-bottom: 1.25rem; font-size: 24px; letter-spacing: 0;">
 							Become Part of ACM-W
 						</h3>
-						<p style="font-size: 0.875rem; line-height: 1.7; color: #334155; margin-bottom: 0;">
+						<p style="font-size: 0.875rem; line-height: 1.7; color: #000000; margin-bottom: 0;">
 							Are you interested in being part of an organization that supports and promote women in the
 							field? When you join ACM, or renew your membership, check the box for ACM-W. You will be
 							added to the ACM-W email list and receive announcements as well as our ACM-W Connection
@@ -310,7 +310,7 @@ endif;
 							<div
 								style="font-weight: 700; font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif; font-size: 1.15rem; color: #0f172a; margin-bottom: 0.35rem;">
 								ACM-W India Founded</div>
-							<p>Established as India's regional chapter of ACM-W, with founding members from premier
+							<p style="color: #000000;">Established as India's regional chapter of ACM-W, with founding members from premier
 								institutes across the country committed to advancing women in computing.</p>
 						</div>
 
@@ -325,7 +325,7 @@ endif;
 							<div
 								style="font-weight: 700; font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif; font-size: 1.15rem; color: #0f172a; margin-bottom: 0.35rem;">
 								First Annual Symposium</div>
-							<p>Launched the flagship annual symposium attracting 400+ attendees, setting the template
+							<p style="color: #000000;">Launched the flagship annual symposium attracting 400+ attendees, setting the template
 								for the country's premier women-in-computing conference.</p>
 						</div>
 
@@ -340,7 +340,7 @@ endif;
 							<div
 								style="font-weight: 700; font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif; font-size: 1.15rem; color: #0f172a; margin-bottom: 0.35rem;">
 								Lady Ada Contest Launched</div>
-							<p>Introduced the Lady Ada Programming Contest, named in honour of Ada Lovelace, giving
+							<p style="color: #000000;">Introduced the Lady Ada Programming Contest, named in honour of Ada Lovelace, giving
 								women a dedicated national platform to showcase coding excellence.</p>
 						</div>
 
@@ -355,7 +355,7 @@ endif;
 							<div
 								style="font-weight: 700; font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif; font-size: 1.15rem; color: #0f172a; margin-bottom: 0.35rem;">
 								50+ Student Chapters</div>
-							<p>Surpassed 50 active student chapters, marking a major expansion in grassroots community
+							<p style="color: #000000;">Surpassed 50 active student chapters, marking a major expansion in grassroots community
 								building and mentorship across India's engineering colleges.</p>
 						</div>
 
@@ -370,7 +370,7 @@ endif;
 							<div
 								style="font-weight: 700; font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif; font-size: 1.15rem; color: #0f172a; margin-bottom: 0.35rem;">
 								100+ Chapters &amp; Digital Pivot</div>
-							<p>Surpassed 100 chapters and rapidly scaled online programming during the pandemic,
+							<p style="color: #000000;">Surpassed 100 chapters and rapidly scaled online programming during the pandemic,
 								reaching 3x more participants through virtual events and workshops.</p>
 						</div>
 
@@ -385,7 +385,7 @@ endif;
 							<div
 								style="font-weight: 700; font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif; font-size: 1.15rem; color: #0f172a; margin-bottom: 0.35rem;">
 								NariYukti Hackathon Launched</div>
-							<p>Launched NariYukti, a flagship national-level all-women hackathon, empowering women to
+							<p style="color: #000000;">Launched NariYukti, a flagship national-level all-women hackathon, empowering women to
 								innovate and solve real-world problems through technology.</p>
 						</div>
 					</div>

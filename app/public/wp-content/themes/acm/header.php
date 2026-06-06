@@ -309,7 +309,7 @@
 						} else {
 							echo '<div class="menu-container"><ul id="primary-menu" class="nav-menu" style="display:flex; list-style:none; margin:0; padding:0 0 0 15px; align-items:center; height:100%;">';
 							echo '<li class="menu-item" style="margin-right: 2rem;"><a href="/" style="color:#fff; font-weight:400; font-family:\'Roboto Condensed\', Helvetica, Roboto, Arial, sans-serif; font-size:15px; text-transform:uppercase; text-decoration:none;">Home</a></li>';
-							echo '<li class="menu-item" style="margin-right: 2rem;"><a href="/about-us/" style="color:#fff; font-weight:400; font-family:\'Roboto Condensed\', Helvetica, Roboto, Arial, sans-serif; font-size:15px; text-transform:uppercase; text-decoration:none;">About Us</a></li>';
+							echo '<li class="menu-item" style="margin-right: 2rem;"><a href="/about/" style="color:#fff; font-weight:400; font-family:\'Roboto Condensed\', Helvetica, Roboto, Arial, sans-serif; font-size:15px; text-transform:uppercase; text-decoration:none;">About</a></li>';
 							echo '<li class="menu-item" style="margin-right: 2rem;"><a href="/executive-committee/" style="color:#fff; font-weight:400; font-family:\'Roboto Condensed\', Helvetica, Roboto, Arial, sans-serif; font-size:15px; text-transform:uppercase; text-decoration:none;">Executive Committee</a></li>';
 							echo '<li class="menu-item"><a href="/flagship-events/" style="color:#fff; font-weight:400; font-family:\'Roboto Condensed\', Helvetica, Roboto, Arial, sans-serif; font-size:15px; text-transform:uppercase; text-decoration:none;">Flagship Events</a></li>';
 							echo '</ul></div>';

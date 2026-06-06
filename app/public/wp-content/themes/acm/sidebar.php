@@ -8,28 +8,33 @@
  */
 ?>
 
-<?php
-if (is_active_sidebar('content_right')):
-	?>
-	<aside id="secondary" class="columns large-4 medium-4 small-12 reveal-on-scroll reveal-delay-2" role="complementary">
+<aside id="secondary" class="columns large-4 medium-4 small-12 reveal-on-scroll reveal-delay-2" role="complementary">
 
 		<!-- Search Widget -->
 		<div class="widget widget_search" style="margin-bottom: 2.5rem;">
 			<?php get_search_form(); ?>
 		</div>
 
-		<!-- Social Feed Widget (Automatically styled with glassmorphism) -->
+		<!-- LinkedIn Feed Widget -->
 		<div class="widget linkedin-feed-widget" style="margin-bottom: 2.5rem;">
 			<h3 class="widget-title"
 				style="font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif; font-size: 20px; font-weight: 700; letter-spacing: 0; color: #0f172a; border-bottom: 2px solid #00b4d8; padding-bottom: 0.5rem; margin-bottom: 1rem;">
 				Recent Updates</h3>
 
-			<!-- ========================================================================= -->
-			<div class="tagembed-widget"
-				style="width: 125%; height: 600px; transform: scale(0.8); transform-origin: top left; overflow: auto; border-radius: 12px; margin-bottom: -120px;"
-				data-widget-id="326992" data-website="1"></div>
-			<script src="https://widget.tagembed.com/embed.min.js" type="text/javascript"></script>
-			<!-- ========================================================================= -->
+			<div class="linkedin-feed-scroll"
+				style="max-height: 600px; overflow-y: auto; border-radius: 12px; scrollbar-width: thin; scrollbar-color: #00b4d8 #f1f5f9; position: relative;">
+				
+				<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7463776506826108928?collapsed=1" frameborder="0" allowfullscreen="" title="Embedded post" style="width: 100%; max-width: 504px; height: 669px; display: block; margin: 0 auto 1rem auto; border: none; border-radius: 8px; background: #f8fafc;"></iframe>
+
+				<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7463451893990600705?collapsed=1" frameborder="0" allowfullscreen="" title="Embedded post" style="width: 100%; max-width: 504px; height: 669px; display: block; margin: 0 auto 1rem auto; border: none; border-radius: 8px; background: #f8fafc;"></iframe>
+
+				<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7462452276243218433?collapsed=1" frameborder="0" allowfullscreen="" title="Embedded post" style="width: 100%; max-width: 504px; height: 669px; display: block; margin: 0 auto 1rem auto; border: none; border-radius: 8px; background: #f8fafc;"></iframe>
+
+				<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7461777667067973632?collapsed=1" frameborder="0" allowfullscreen="" title="Embedded post" style="width: 100%; max-width: 504px; height: 669px; display: block; margin: 0 auto 1rem auto; border: none; border-radius: 8px; background: #f8fafc;"></iframe>
+
+				<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7461019607055646720?collapsed=1" frameborder="0" allowfullscreen="" title="Embedded post" style="width: 100%; max-width: 504px; height: 669px; display: block; margin: 0 auto 0 auto; border: none; border-radius: 8px; background: #f8fafc;"></iframe>
+
+			</div>
 		</div>
 
 		<!-- Newsletter Subscription Panel -->
@@ -56,4 +61,3 @@ if (is_active_sidebar('content_right')):
 		</div>
 
 	</aside><!-- .sidebar .widget-area -->
-<?php endif; ?>
