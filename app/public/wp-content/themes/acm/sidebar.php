@@ -9,20 +9,51 @@
 ?>
 
 <?php
-if ( is_active_sidebar( 'content_right' ) ) :
+if (is_active_sidebar('content_right')):
 	?>
-<aside id="secondary" class="columns large-4 medium-4 small-12 reveal-on-scroll reveal-delay-2" role="complementary">
-	
-	<!-- Social Feed Widget (Automatically styled with glassmorphism) -->
-	<div class="widget linkedin-feed-widget" style="margin-bottom: 2rem;">
-		<h3 class="widget-title" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 1.2rem; color: #003049; border-bottom: 2px solid #b9dfe9; padding-bottom: 0.5rem; margin-bottom: 1rem;">Recent Updates</h3>
-		
-		<!-- ========================================================================= -->
-		<div class="tagembed-widget" style="width:100%;height:600px;overflow:auto;" data-widget-id="326992" data-website="1"></div>
-		<script src="https://widget.tagembed.com/embed.min.js" type="text/javascript"></script>
-		<!-- ========================================================================= -->
-	</div>
+	<aside id="secondary" class="columns large-4 medium-4 small-12 reveal-on-scroll reveal-delay-2" role="complementary">
 
-	<?php dynamic_sidebar( 'content_right' ); ?>
-</aside><!-- .sidebar .widget-area -->
+		<!-- Search Widget -->
+		<div class="widget widget_search" style="margin-bottom: 2.5rem;">
+			<?php get_search_form(); ?>
+		</div>
+
+		<!-- Social Feed Widget (Automatically styled with glassmorphism) -->
+		<div class="widget linkedin-feed-widget" style="margin-bottom: 2.5rem;">
+			<h3 class="widget-title"
+				style="font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif; font-size: 20px; font-weight: 700; letter-spacing: 0; color: #0f172a; border-bottom: 2px solid #00b4d8; padding-bottom: 0.5rem; margin-bottom: 1rem;">
+				Recent Updates</h3>
+
+			<!-- ========================================================================= -->
+			<div class="tagembed-widget"
+				style="width: 125%; height: 600px; transform: scale(0.8); transform-origin: top left; overflow: auto; border-radius: 12px; margin-bottom: -120px;"
+				data-widget-id="326992" data-website="1"></div>
+			<script src="https://widget.tagembed.com/embed.min.js" type="text/javascript"></script>
+			<!-- ========================================================================= -->
+		</div>
+
+		<!-- Newsletter Subscription Panel -->
+		<div class="widget newsletter-widget"
+			style="margin-bottom: 2rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; text-align: center; color: #0f172a; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+			<div
+				style="width: 48px; height: 48px; background-color: #eff6ff; color: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+					<polyline points="22,6 12,13 2,6"></polyline>
+				</svg>
+			</div>
+			<h4
+				style="font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif; font-size: 20px; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem;">
+				Stay Connected</h4>
+			<p style="font-size: 0.85rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem;">
+				Subscribe to the ACM-W Connection newsletter to receive the latest updates, event announcements, and more.
+			</p>
+			<a href="https://women.acm.org/contact/" target="_blank" rel="noopener noreferrer"
+				style="display: inline-block; background-color: #0f172a; color: #fff; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; transition: background-color 0.2s;">
+				Subscribe Now
+			</a>
+		</div>
+
+	</aside><!-- .sidebar .widget-area -->
 <?php endif; ?>

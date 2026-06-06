@@ -113,7 +113,7 @@ html.lenis body {
 
 /* --- Modern Glassmorphism Background --- */
 body {
-  background-color: #f4f4f4; /* Original grey base */
+  background-color: #e6e6e6 !important; /* Noticeably more grey base */
 }
 
 /* --- Glassmorphic Cards & Containers --- */
@@ -247,7 +247,7 @@ body {
 
 /* Canvas background override for the maincontent container */
 .article#maincontent {
-  background: #ffffff !important;
+  background: #f8fafc !important; /* Soft greyish white */
   color: #1e293b !important;
   transition: background 0.5s ease;
 }
@@ -488,5 +488,92 @@ body {
 .eq-row-flex > [class*="column"] {
   display: flex;
   flex-direction: column;
+}
+
+/* ============================================================
+   Roboto Condensed Typography System — Header Elements Only
+   Navigation: 15px, weight 400
+   Hero Heading: 30px, weight 700
+   Section Headings: 24px, weight 700
+   ============================================================ */
+
+/* --- Navigation Menu --- */
+.top-bar.main-nav section li.menu-item > a {
+  font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase;
+}
+
+/* Fallback menu links */
+.menu-container .menu-item a {
+  font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+}
+
+/* --- Hero Banner Heading --- */
+.banner-heading {
+  font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif !important;
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+/* --- Section Headings (h2, h3 in main content) --- */
+.intro-section h2,
+.intro-section h3,
+.article#maincontent h2,
+.article#maincontent h3,
+.zone-1 h2,
+.zone-1 h3 {
+  font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+/* Hero-sized section headings (Mission/Vision/Values, Milestones) keep larger size */
+.zone-1 > div > h2[style*="2.2rem"],
+.zone-1 > div > h3[style*="2.2rem"] {
+  font-size: 30px !important;
+}
+
+/* Timeline item titles */
+.timeline-item div[style*="font-family: 'Roboto Condensed'"] {
+  font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif !important;
+}
+
+/* Mission/Vision/Values card titles inside the blue panels */
+.zone-1 h3[style*="color: #fff"] {
+  font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+}
+
+/* Header branding text */
+.acmw-title,
+.acmw-title-mobile {
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+.acmw-title-mobile {
+  font-size: 15px !important;
+}
+
+/* Sidebar widget titles */
+#secondary .widget-title {
+  font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
 }
 
