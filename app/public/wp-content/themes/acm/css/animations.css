@@ -421,7 +421,6 @@ body {
   transform: translateY(-3px);
 }
 
-/* Sidebar styles on Light background */
 #secondary .widget {
   background: #ffffff !important;
   border: 1px solid #e2e8f0 !important;
@@ -429,17 +428,20 @@ body {
   border-radius: 14px !important;
   padding: 1.5rem !important;
   color: #334155 !important;
+  font-size: 0.8rem !important;
 }
 
 #secondary .widget-title {
   color: #0f172a !important;
   border-bottom: 2px solid #bae6fd !important;
   font-weight: 700 !important;
+  font-size: 1.2rem !important;
 }
 
 #secondary .widget a {
   color: #0284c7 !important;
   transition: color 0.3s ease;
+  font-size: 0.8rem !important;
 }
 
 #secondary .widget a:hover {
@@ -450,6 +452,15 @@ body {
 #secondary .widget li {
   border-bottom: 1px solid #f1f5f9 !important;
   padding: 0.6rem 0 !important;
+  font-size: 0.8rem !important;
+}
+
+/* Custom CSS to target tagembed social feed elements if rendered in DOM */
+.tagembed-widget,
+.tagembed-widget *,
+.tagembed-social-feed,
+.tagembed-social-feed * {
+  font-size: 0.8rem !important;
 }
 
 /* How to start chapter step number bubble */

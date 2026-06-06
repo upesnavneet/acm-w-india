@@ -37,10 +37,10 @@ require_once get_template_directory() . '/src/widgets/SelectTypeOfSite/SelectTyp
 if ( ! function_exists( 'is_plugin_active' ) ) {
 	require_once ABSPATH . '/wp-admin/includes/plugin.php';
 }
-if ( function_exists( 'is_plugin_active' ) && ! is_plugin_active( 'wps-hide-login/wps-hide-login.php' ) ) {
-	require_once get_template_directory() . '/src/wp-hide-login-custom/singleton.php';
-	require_once get_template_directory() . '/src/wp-hide-login-custom/plugin.php';
-}
+// if ( function_exists( 'is_plugin_active' ) && ! is_plugin_active( 'wps-hide-login/wps-hide-login.php' ) ) {
+// 	require_once get_template_directory() . '/src/wp-hide-login-custom/singleton.php';
+// 	require_once get_template_directory() . '/src/wp-hide-login-custom/plugin.php';
+// }
 // require_once get_template_directory() . '/src/WPLogin.php';
 
 if ( get_option( 'acm_enable_gutenberg_support' ) === 'on' ) {
@@ -562,10 +562,10 @@ ACMThemeConfiguration::init();
 // Activate ACM Theme Feedback page.
 // ACMThemeFeedback::init();
 // Activate custom wp-admin route
-if ( function_exists( 'is_plugin_active' ) && ! is_plugin_active( 'wps-hide-login/wps-hide-login.php' ) ) {
-	Plugin::get_instance();
-	Plugin::activate();
-}
+// if ( function_exists( 'is_plugin_active' ) && ! is_plugin_active( 'wps-hide-login/wps-hide-login.php' ) ) {
+// 	Plugin::get_instance();
+// 	Plugin::activate();
+// }
 // turning off auto updates for plugins
 add_filter( 'auto_update_plugin', '__return_false' );
 // turning off auto updates for themes

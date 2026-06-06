@@ -1,4 +1,4 @@
-<article class="has-edit-button columns large-9 medium-9 small-9 zone-1" id="SkipTarget" tabindex="-1">
+<article class="has-edit-button columns large-8 medium-8 small-12 zone-1" id="SkipTarget" tabindex="-1">
 	<div class="row">
 		<div class="columns small-12">
 			<?php

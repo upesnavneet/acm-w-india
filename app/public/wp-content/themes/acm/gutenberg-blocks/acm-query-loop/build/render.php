@@ -1,4 +1,4 @@
-<div class="columns large-9 medium-9 small-12 zone-1">
+<div class="columns large-8 medium-8 small-12 zone-1">
 	<div class="articles">
 		<div class="three-cols article-block">
 			<div class="row" data-equalizer>

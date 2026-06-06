@@ -27,7 +27,7 @@ get_header(); ?>
 
 
 		<div class="row">
-			<article class="columns large-9 medium-9 small-12 blocks has-edit-button reveal-on-scroll" id="SkipTarget" tabindex="-1">
+			<article class="columns large-8 medium-8 small-12 blocks has-edit-button reveal-on-scroll" id="SkipTarget" tabindex="-1">
 				<h1><?php the_title(); ?></h1>
 				<?php
 					the_post_thumbnail(

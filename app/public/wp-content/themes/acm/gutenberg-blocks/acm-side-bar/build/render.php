@@ -7,7 +7,7 @@ foreach ( $block->inner_blocks as $inner_block ) {
 }
 ?>
 
-<aside id="secondary" class="columns large-3 medium-3 small-12" role="complementary"
+<aside id="secondary" class="columns large-4 medium-4 small-12" role="complementary"
 	<?php echo get_block_wrapper_attributes(); ?>>
 	<?php echo $inner_blocks_html; ?>
 </aside>
